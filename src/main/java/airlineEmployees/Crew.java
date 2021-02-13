@@ -14,4 +14,8 @@ public abstract class Crew {
     public String getName(){
         return this.name;
     };
+
+    public Rank getRank(){
+        return rank;
+    };
 }

@@ -18,4 +18,9 @@ public class FlightAttendantTest {
     public void hasName(){
         assertEquals("Phil Seetz", flightAttendant.getName());
     }
+
+    @Test
+    public void hasRank(){
+        assertEquals(Rank.LEVELONEFLIGHTATTENDANT, flightAttendant.getRank());
+    }
 }
