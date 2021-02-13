@@ -23,4 +23,9 @@ public class PlaneTest {
     public void hasCapacity(){
         assertEquals(4, plane.getPassengerCapacity());
     }
+
+    @Test
+    public void hasWeightLimit(){
+        assertEquals(300, plane.getWeightLimit());
+    }
 }
