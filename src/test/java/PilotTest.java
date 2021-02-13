@@ -14,8 +14,13 @@ public class PilotTest {
         pilot = new Pilot("Francine Goose", Rank.FIRSTOFFICER, 85212);
     }
 
+
+
     @Test
     public void hasLicenceNumber(){
         assertEquals(85212, pilot.getLicenceNumber());
     }
+
+    //@Test
+
 }
