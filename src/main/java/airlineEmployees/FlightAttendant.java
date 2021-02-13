@@ -6,4 +6,7 @@ public class FlightAttendant extends Crew {
         super(name,rank);
     }
 
+    public String relayMessage() {
+        return "Please fasten your seatbelts.";
+    }
 }

@@ -23,4 +23,9 @@ public class FlightAttendantTest {
     public void hasRank(){
         assertEquals(Rank.LEVELONEFLIGHTATTENDANT, flightAttendant.getRank());
     }
+
+    @Test
+    public void canRelayMessage(){
+        assertEquals("Please fasten your seatbelts.", flightAttendant.relayMessage());
+    }
 }
