@@ -13,4 +13,12 @@ public enum planeType {
         this.weightLimit = weightLimit;
     }
 
+    public int getPassengerCapacity(){
+        return this.passengerCapacity;
+    }
+
+    public int getWeightLimit(){
+        return this.weightLimit;
+    }
+
 }

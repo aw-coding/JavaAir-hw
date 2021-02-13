@@ -18,4 +18,9 @@ public class PlaneTest {
     public void hasType() {
         assertEquals(planeType.CESSNA152, plane.getPlaneType());
     }
+
+    @Test
+    public void hasCapacity(){
+        assertEquals(4, plane.getPassengerCapacity());
+    }
 }
