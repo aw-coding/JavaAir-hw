@@ -77,7 +77,9 @@ public class Flight {
         this.passengers.clear();
     }
 
-    public int getTotalPassengerWeight(){
-        return this.getNumberOfPassengers() * 70;
+
+    public double getRemainingWeightForLuggagePerPassenger() {
+        double halfWeight = this.plane.getWeightLimit() / 2;
+        return (halfWeight / this.plane.getPassengerCapacity());
     }
 }

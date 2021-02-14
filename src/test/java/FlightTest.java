@@ -96,11 +96,11 @@ public class FlightTest {
         assertEquals(0, flight.getNumberOfPassengers());
     }
 
+
+
     @Test
-    public void canGetTotalWeightOfPassengers(){
-        flight.bookPassenger(passenger1);
-        flight.bookPassenger(passenger2);
-        assertEquals(140, flight.getTotalPassengerWeight());
+    public void canGetTotalWeightAvailableForBaggage(){
+        assertEquals(37.5, flight.getRemainingWeightForLuggagePerPassenger(), 0.0);
     }
 
 
