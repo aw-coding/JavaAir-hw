@@ -112,6 +112,11 @@ public class FlightTest {
         assertEquals(75.0, flight.getLuggageWeightReservedForBookedPassengers(), 0.0);
     }
 
-
+    @Test
+    public void canGetWeightRemainingForLuggage(){
+        flight.bookPassenger(passenger1);
+        flight.bookPassenger(passenger2);
+        assertEquals(75.0, flight.getWeightRemainingForLuggage(), 0);
+    }
 
 }

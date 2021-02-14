@@ -87,4 +87,9 @@ public class Flight {
         return this.getRemainingWeightForLuggagePerPassenger() * 
                 this.getNumberOfPassengers();
     }
+    
+    public double getWeightRemainingForLuggage(){
+        double halfWeight = this.plane.getWeightLimit() / 2;
+        return halfWeight - this.getLuggageWeightReservedForBookedPassengers();
+    }
 }
