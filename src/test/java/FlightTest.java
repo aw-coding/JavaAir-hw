@@ -35,6 +35,8 @@ public class FlightTest {
     @Before
     public void before(){
         plane = new Plane(planeType.CESSNA152);
+        passenger1 = new Passenger("John Java", 2);
+        passenger2 = new Passenger("Celia Ceeplusplus", 1);
 
         flight = new Flight(pilots, cabinCrew, passengers, plane, flightNumber,
                 departureAirport, arrivalAirport, departureTime);
@@ -102,6 +104,14 @@ public class FlightTest {
     public void canGetTotalWeightAvailableForBaggage(){
         assertEquals(37.5, flight.getRemainingWeightForLuggagePerPassenger(), 0.0);
     }
+
+    @Test
+    public void canGetTotalWeightOfLuggage(){
+        flight.bookPassenger(passenger1);
+        flight.bookPassenger(passenger2);
+        assertEquals(75.0, flight.getLuggageWeightReservedForBookedPassengers(), 0.0);
+    }
+
 
 
 }
