@@ -52,11 +52,6 @@ public class FlightTest {
         assertEquals(1, flight.getNumberOfFlightAttendants());
     }
 
-//    @Test
-//    public void canAddPassenger(){
-//        flight.addPassenger(passenger1);
-//        assertEquals(1, flight.getNumberOfPassengers());
-//    }
 
     @Test
     public void canGetFlightNumber(){
@@ -100,5 +95,13 @@ public class FlightTest {
         flight.passengersDisembark();
         assertEquals(0, flight.getNumberOfPassengers());
     }
+
+    @Test
+    public void canGetTotalWeightOfPassengers(){
+        flight.bookPassenger(passenger1);
+        flight.bookPassenger(passenger2);
+        assertEquals(140, flight.getTotalPassengerWeight());
+    }
+
 
 }

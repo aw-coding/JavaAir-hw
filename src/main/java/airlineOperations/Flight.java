@@ -46,9 +46,6 @@ public class Flight {
         return this.cabinCrew.size();
     }
 
-//    public void addPassenger(Passenger passenger) {
-//        passengers.add(passenger);
-//    }
 
     public int getNumberOfPassengers() {
         return this.passengers.size();
@@ -78,5 +75,9 @@ public class Flight {
 
     public void passengersDisembark(){
         this.passengers.clear();
+    }
+
+    public int getTotalPassengerWeight(){
+        return this.getNumberOfPassengers() * 70;
     }
 }
