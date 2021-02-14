@@ -28,4 +28,6 @@ public class PlaneTest {
     public void hasWeightLimit(){
         assertEquals(300, plane.getWeightLimit());
     }
+
+
 }

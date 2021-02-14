@@ -2,6 +2,7 @@ import airlineEmployees.FlightAttendant;
 import airlineEmployees.Pilot;
 import airlineOperations.Flight;
 import airlineOperations.Plane;
+import airlineOperations.planeType;
 import customers.Passenger;
 import org.junit.Before;
 import org.junit.Test;
@@ -23,8 +24,6 @@ public class FlightTest {
     ArrayList<Passenger> passengers;
     Passenger passenger1;
     Passenger passenger2;
-    Passenger passenger3;
-    Passenger passenger4;
     Plane plane;
     String flightNumber = "JA1001";
     String departureAirport = "EDI";
@@ -35,6 +34,7 @@ public class FlightTest {
 
     @Before
     public void before(){
+        plane = new Plane(planeType.CESSNA152);
 
         flight = new Flight(pilots, cabinCrew, passengers, plane, flightNumber,
                 departureAirport, arrivalAirport, departureTime);
@@ -52,11 +52,11 @@ public class FlightTest {
         assertEquals(1, flight.getNumberOfFlightAttendants());
     }
 
-    @Test
-    public void canAddPassenger(){
-        flight.addPassenger(passenger1);
-        assertEquals(1, flight.getNumberOfPassengers());
-    }
+//    @Test
+//    public void canAddPassenger(){
+//        flight.addPassenger(passenger1);
+//        assertEquals(1, flight.getNumberOfPassengers());
+//    }
 
     @Test
     public void canGetFlightNumber(){
@@ -76,6 +76,22 @@ public class FlightTest {
     @Test
     public void canGetDepartureTime(){
         assertEquals(0745, flight.getDepartureTime());
+    }
+
+    @Test
+    public void canBookPassenger(){
+        flight.bookPassenger(passenger1);
+        assertEquals(1, flight.getNumberOfPassengers());
+    }
+
+    @Test
+    public void cannotOverBookFlight(){
+        flight.bookPassenger(passenger1);
+        flight.bookPassenger(passenger1);
+        flight.bookPassenger(passenger1);
+        flight.bookPassenger(passenger1);
+        flight.bookPassenger(passenger2);
+        assertEquals(4, flight.getNumberOfPassengers());
     }
 
 }

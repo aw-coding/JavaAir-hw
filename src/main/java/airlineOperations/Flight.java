@@ -46,9 +46,9 @@ public class Flight {
         return this.cabinCrew.size();
     }
 
-    public void addPassenger(Passenger passenger) {
-        passengers.add(passenger);
-    }
+//    public void addPassenger(Passenger passenger) {
+//        passengers.add(passenger);
+//    }
 
     public int getNumberOfPassengers() {
         return this.passengers.size();
@@ -68,5 +68,11 @@ public class Flight {
 
     public int getDepartureTime(){
         return this.departureTime;
+    }
+
+    public void bookPassenger(Passenger passenger){
+        if (this.getNumberOfPassengers() < this.plane.getPassengerCapacity()) {
+            this.passengers.add(passenger);
+        }
     }
 }
