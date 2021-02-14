@@ -57,4 +57,8 @@ public class Flight {
     public String getFlightNumber(){
         return this.flightNumber;
     }
+
+    public String getDepartureAirport(){
+        return this.departureAirport;
+    }
 }
