@@ -94,4 +94,11 @@ public class FlightTest {
         assertEquals(4, flight.getNumberOfPassengers());
     }
 
+    @Test
+    public void passengersCanDisembark(){
+        flight.bookPassenger(passenger1);
+        flight.passengersDisembark();
+        assertEquals(0, flight.getNumberOfPassengers());
+    }
+
 }

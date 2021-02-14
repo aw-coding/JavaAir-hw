@@ -75,4 +75,8 @@ public class Flight {
             this.passengers.add(passenger);
         }
     }
+
+    public void passengersDisembark(){
+        this.passengers.clear();
+    }
 }
