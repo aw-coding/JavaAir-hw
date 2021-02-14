@@ -46,4 +46,21 @@ public class FlightTest {
         assertEquals(1, flight.getNumberOfPilots());
     }
 
+    @Test
+    public void canAddFlightAttendant(){
+        flight.addFlightAttendant(flightAttendant1);
+        assertEquals(1, flight.getNumberOfFlightAttendants());
+    }
+
+    @Test
+    public void canAddPassenger(){
+        flight.addPassenger(passenger1);
+        assertEquals(1, flight.getNumberOfPassengers());
+    }
+
+//    @Test
+//    public void canGetFlightNumber(){
+//        assertEquals("JA1001", flight.getFlightNumber());
+//    }
+
 }

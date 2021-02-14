@@ -37,4 +37,20 @@ public class Flight {
     public void addPilot(Pilot pilot){
         pilots.add(pilot);
     }
+
+    public void addFlightAttendant(FlightAttendant flightAttendant){
+        cabinCrew.add(flightAttendant);
+    }
+
+    public int getNumberOfFlightAttendants(){
+        return this.cabinCrew.size();
+    }
+
+    public void addPassenger(Passenger passenger) {
+        passengers.add(passenger);
+    }
+
+    public int getNumberOfPassengers() {
+        return this.passengers.size();
+    }
 }
