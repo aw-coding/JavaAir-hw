@@ -68,4 +68,9 @@ public class FlightTest {
         assertEquals("EDI", flight.getDepartureAirport());
     }
 
+    @Test
+    public void canGetArrivalAirport(){
+        assertEquals("LAX", flight.getArrivalAirport());
+    }
+
 }
