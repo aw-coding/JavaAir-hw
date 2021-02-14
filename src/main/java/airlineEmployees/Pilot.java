@@ -14,4 +14,8 @@ public class Pilot extends Crew {
     public int getLicenceNumber() {
         return this.licenceNumber;
     }
+
+    public String fly() {
+        return "Ready for takeoff.";
+    }
 }
