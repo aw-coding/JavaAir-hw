@@ -53,4 +53,8 @@ public class Flight {
     public int getNumberOfPassengers() {
         return this.passengers.size();
     }
+
+    public String getFlightNumber(){
+        return this.flightNumber;
+    }
 }
